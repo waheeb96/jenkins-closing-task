@@ -15,7 +15,7 @@ pipeline {
 
     post{
         success{
-            slackSend channel: 'jenkins-final-task-notifacation', message: 'build success!!', teamDomain: 'jenkins'
+            slackSend baseUrl: 'https://hooks.slack.com/services/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/', channel: 'jenkins-final-task-notifacation', message: 'build success', teamDomain: 'jenkins', username: 'waheeb2607'
         }
     
     }      
