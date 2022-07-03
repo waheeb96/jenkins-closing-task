@@ -10,18 +10,13 @@ pipeline {
             steps {
                  sh 'sudo nohup java -jar target/jenkins-closing-task-0.0.1-SNAPSHOT.jar &'
             }
-}
+          }
+     }
 
     post{
         success{
             slackSend channel: 'jenkins-final-task-notifacation', message: 'build success!!', teamDomain: 'jenkins'
         }
     
-    }
-
-
-            
-            
-
-      
+    }      
 }
