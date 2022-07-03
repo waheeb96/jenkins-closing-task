@@ -35,7 +35,7 @@
 			<scope>test</scope>
 		</dependency>
 
-	<dependency>
+	        <dependency>
 			<groupId>com.fursa.xmlToHtml</groupId>
 			<artifactId>jenkins-closing-task</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
