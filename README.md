@@ -15,6 +15,5 @@ mvn clean package
 3. run the app:
 java -jar target/jenkins-closing-task-0.0.1-SNAPSHOT.jar
 
-![final-pic-1](https://user-images.githubusercontent.com/72220299/177026206-555e0fff-0731-480b-9d7e-7385e6f04884.PNG)
 ![final-pic-2](https://user-images.githubusercontent.com/72220299/177026209-cafb31aa-db60-4fd2-8409-6f1e1ab87277.PNG)
 
