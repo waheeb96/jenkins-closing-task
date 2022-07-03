@@ -12,6 +12,13 @@ pipeline {
             }
 }
 
+    post{
+        success{
+            slackSend channel: 'jenkins-final-task-notifacation', message: 'build success!!', teamDomain: 'jenkins'
+        }
+    
+    }
+
 
             
             
