@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                    sh 'mvn clean package'
+            }
+        }
+         stage('Run') {
+            steps {
+                 sh 'java -jar target/jenkins-closing-task-0.0.1-SNAPSHOT.jar'
+            }
+}
+
+
+            
+            
+}
+      
+}
