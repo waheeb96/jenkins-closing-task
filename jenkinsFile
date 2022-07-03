@@ -8,7 +8,7 @@ pipeline {
         }
          stage('Run') {
             steps {
-                 sh 'java -jar target/jenkins-closing-task-0.0.1-SNAPSHOT.jar'
+                 sh 'sudo nohup java -jar target/jenkins-closing-task-0.0.1-SNAPSHOT.jar &'
             }
 }
 
