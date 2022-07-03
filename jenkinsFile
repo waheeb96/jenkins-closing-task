@@ -13,9 +13,5 @@ pipeline {
           }
      }
 
-    post{
-     success {
-            slackSend baseUrl: 'https://hooks.slack.com/services/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/', channel: 'jenkins-notifacation', message: 'build success', teamDomain: 'build-success', username: 'waheeb2607'
-        }
-    }      
+
 }
