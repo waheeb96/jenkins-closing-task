@@ -35,12 +35,6 @@
 			<scope>test</scope>
 		</dependency>
 
-	        <dependency>
-			<groupId>com.fursa.xmlToHtml</groupId>
-			<artifactId>jenkins-closing-task</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-
 		<dependency>
 			<groupId>rome</groupId>
 			<artifactId>rome</artifactId>
