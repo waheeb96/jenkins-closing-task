@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>com.fursa.xmlToHtml</groupId>
 			<artifactId>jenkins-closing-task</artifactId>
-			<version>0.0.1</version>
+			<version>2.7.1</version>
 		</dependency>
 		
 		<dependency>
