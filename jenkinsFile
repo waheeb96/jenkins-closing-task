@@ -14,9 +14,13 @@ pipeline {
      }
 
     post{
-        success{
-curl -X POST -H 'Content-type: application/json' --data '{"text":"build success!"}' https://hooks.slack.com/services/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     
-}
-    
+     success {
+        script {
+          slackSend(
+            color: "#00FF00",
+            channel: "jenkins-final-task-notifacation",
+            message: "Status: SUCCESS"
+          )
+        }
     }      
 }
