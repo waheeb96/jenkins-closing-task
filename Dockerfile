@@ -1,7 +1,7 @@
 # build using maven
 
 FROM maven as build
-WORKDIR /code
+COPY . /code
 RUN  mvn clean package
 
 
