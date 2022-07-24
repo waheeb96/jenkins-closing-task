@@ -2,9 +2,7 @@
 
 FROM maven as build
 WORKDIR /code
-RUN git clone https://github.com/waheeb96/news-parser \
-    && cd news-parser \
-    && mvn clean package
+RUN  mvn clean package
 
 
 # run 
