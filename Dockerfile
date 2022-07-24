@@ -1,8 +1,10 @@
 # build using maven
 
 FROM maven as build
-COPY . /code
-RUN  mvn clean package
+WORKDIR /code
+RUN git clone https://github.com/waheeb96/news-parser \
+  && cd news-parser \
+  && mvn clean package
 
 
 # run 
