@@ -13,8 +13,8 @@ RUN cd /news-parser \
 
 FROM openjdk:17.0.2-oraclelinux8 
 
-COPY --from=build Ynet-News/build/libs/Ynet-News-0.0.1-SNAPSHOT.jar .
+COPY --from=build news-parser/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 5000
 
-CMD ["java","-jar", "Ynet-News-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar", "jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
