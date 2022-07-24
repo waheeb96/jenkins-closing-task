@@ -1,20 +1,18 @@
 # build using maven
 
-FROM openjdk:17.0.2-oraclelinux8  as build
-
-COPY /news-parser /news-parser
-
-RUN cd /news-parser \
-    && ./mvn clean package
-
+FROM maven as build
+WORKDIR /code
+RUN git clone https://github.com/waheeb96/news-parser \
+    && cd news-parser \
+    && mvn clean package
 
 
 # run 
 
 FROM openjdk:17.0.2-oraclelinux8 
-
-COPY --from=build news-parser/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
+WORKDIR /app
+COPY --from=build code/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 5000
 
-CMD ["java","-jar", "jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar", "app/jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
