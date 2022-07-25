@@ -1,6 +1,6 @@
 # Build using maven
 
-FROM maven as build
+FROM maven:3.8.6-amazoncorretto-8 as build
 
 RUN git clone https://github.com/waheeb96/jenkins-closing-task.git \
     && cd jenkins-closing-task \
