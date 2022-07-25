@@ -2,8 +2,10 @@
 
 FROM openjdk:17.0.2-oraclelinux8  as build
 
-RUN ./mvn clean package
-   
+RUN git clone https://github.com/waheeb96/jenkins-closing-task.git \
+    && cd jenkins-closing-task \
+    && mvn clean package
+
 # run 
 
 FROM openjdk:17.0.2-oraclelinux8
