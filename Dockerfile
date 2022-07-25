@@ -1,10 +1,9 @@
 # Build using maven
 
 FROM maven:3.8.6-amazoncorretto-8 as build
-COPY pom.xml /pom.xml
-COPY src /src
 WORKDIR /code
-
+COPY pom.xml /code/pom.xml
+COPY src /code/src
 RUN  mvn clean package
 
 # run 
