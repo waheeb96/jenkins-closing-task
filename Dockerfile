@@ -2,9 +2,7 @@
 
 FROM maven:3.8.6-amazoncorretto-8 as build
 
-RUN git clone https://github.com/waheeb96/jenkins-closing-task.git \
-    && cd jenkins-closing-task \
-    && mvn clean package
+RUN  mvn clean package
 
 # run 
 
