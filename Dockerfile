@@ -1,6 +1,6 @@
 # Build using maven
 
-FROM openjdk:17.0.2-oraclelinux8  as build
+FROM maven as build
 
 RUN git clone https://github.com/waheeb96/jenkins-closing-task.git \
     && cd jenkins-closing-task \
