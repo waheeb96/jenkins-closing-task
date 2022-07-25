@@ -1,19 +1,21 @@
-# build using maven
+# Build using maven
 
-FROM maven as build
-WORKDIR /code
-COPY /jenkins-closing-task .
-RUN git clone https://github.com/waheeb96/jenkins-closing-task \
-  && cd jenkins-closing-task \
-  && mvn clean package
+FROM openjdk:17.0.2-oraclelinux8  as build
+
+COPY /jenkins-closing-task /ynet-parser
+
+RUN cd /ynet-parser \
+    && mvn clean package \
+
 
 
 # run 
 
-FROM openjdk:17.0.2-oraclelinux8 
-WORKDIR /app
-COPY --from=build code/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
+FROM openjdk:17.0.2-oraclelinux8
+
+
+COPY --from=build ynet-parser/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8080
 
-CMD ["java","-jar", "app/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar", "jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
