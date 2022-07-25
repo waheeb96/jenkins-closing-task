@@ -5,7 +5,7 @@ FROM openjdk:17.0.2-oraclelinux8  as build
 COPY /jenkins-closing-task /ynet-parser
 
 RUN cd /ynet-parser \
-    && mvn clean package \
+    && mvn clean package 
 
 
 
