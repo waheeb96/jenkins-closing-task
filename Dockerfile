@@ -16,4 +16,4 @@ COPY --from=build code/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8080
 
-CMD ["java","-jar", "", "app/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar", "app/target/jenkins-closing-task-0.0.1-SNAPSHOT.jar"]
